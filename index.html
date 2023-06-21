@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/91d5dfa1bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="head-text">
+                <i class="fa-solid fa-cloud"></i>
+                <p>Weather App</p>
+            </div>
+            
+            <form class="search" role="search">
+                <input type="search" placeholder="Search" id="input">
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="content">
+            
+            <div class="weather">
+                <div class="head">
+                    <span id="cityName">City</span>
+                    <label class="container1">
+                        <input type="checkbox" id="f">
+                        <span class="checkmark">°F</span>
+                    </label>
+                </div>
+                
+                <div class="img">
+                    <img src="images/cloudy(1).png" width="120px" id="img1">
+                    <span id="temp">°C</span>
+                </div>
+                    
+                <div class="info">
+
+                    <table>
+                        <tr>
+                            <td>Humidity</td>
+                            <td id="humidity">0</td>
+                        </tr>
+                        <tr>
+                            <td>Wind speed</td>
+                            <td id="windspeed">0</td>
+                        </tr>
+                        <tr>
+                            <td>Wind degrees</td>
+                            <td id="winddegrees">0</td>
+                        </tr>
+                        <tr>
+                            <td>Min Temp</td>
+                            <td id="mintemp">0</td>
+                        </tr>
+                        <tr>
+                            <td>Max Temp</td>
+                            <td id="maxtemp">0</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

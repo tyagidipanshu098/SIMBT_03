@@ -1,0 +1,210 @@
+body{
+    background: #212121;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/03.png);
+    background-size: cover;
+    background-position: center;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    height: 12vh;
+}
+
+.container1 {
+    display: block;
+    position: relative;
+    
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 30%;
+    position: absolute;
+    font-size: small;
+    text-align: center;
+    color: #212121;
+    font-weight: bold;
+}
+.container1:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.container1 input:checked ~ .checkmark {
+    background-color: #ffcc80;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container1 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.head-text{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.nav p{
+    color: white;
+    font-size: x-large;
+    margin-left: 5%;
+    font-weight: bolder;
+}
+.head-text>i{
+    font-size: xx-large;
+    color: #ffcc80;
+}
+.search input{
+    height: 60%;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    width: 60%;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(95, 93, 93);
+}
+.search button{
+    height: 60%;
+    background: #ffcc80;
+    border: none;
+    border-radius: 5px;
+    color: #212121;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: small;
+}
+.search{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    column-gap: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+}
+.content{
+    display: flex;
+    height: 88vh;
+    background: transparent;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.weather{
+    
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px black;
+    backdrop-filter: blur(2px);
+}
+.img{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+#temp{
+    font-weight: lighter;
+    font-size: 2.5rem;
+    color: white;
+}
+#cityName{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 0;
+    width: 70%;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info table{
+    
+    border-radius: 10px;
+    color: white;
+    width: 60%;
+    margin-top: 20px;
+}
+.info table td{
+    padding: 0px 10px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#f{
+    visibility: hidden;
+}
+#label{
+    background: white;
+    width: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1000px){
+    .weather{
+        background: transparent;
+        width: 50%;
+        height: 80%;
+        border-radius: 10px;
+    }
+}
