@@ -7,7 +7,7 @@ const options = {
 	}
 };
 
- 
+ /*-------Search city and display Temperature-------*/
 
 	async function getWeatherData(city) {		
 	try {
@@ -37,7 +37,8 @@ const options = {
 		document.getElementById("mintemp").innerHTML = mintemp + '°C';
 		document.getElementById("maxtemp").innerHTML = maxtemp + '°C';
 
-
+       /*----------Change weather icons acc to temp value----------*/
+	   
         var img = document.getElementById("img1");
 		if(Temp>=28){
 			img.src="images/sunny.png";
@@ -62,6 +63,7 @@ submitButton.addEventListener("click", function(event) {
     getWeatherData();
 });
 
+ /*----------Convert degree to farenheit-----*/
 
 const checkbox = document.getElementById("f");
 checkbox.addEventListener("change", function() {
@@ -78,3 +80,24 @@ checkbox.addEventListener("change", function() {
 });
 
 
+/*-------change theme-------*/
+
+document.getElementById("theme").addEventListener("click", change); 
+function change(){
+	if(window.getComputedStyle(container).backgroundImage.slice(34,40) == "01.png"){
+		document.getElementById("container").style.backgroundImage = "url(images/04.png)";
+	}
+	else{
+		document.getElementById("container").style.backgroundImage = "url(images/01.png)";
+	}
+
+	if(window.getComputedStyle(themescroller).background == "rgb(99, 98, 98)"){
+		document.getElementById("themescroller").style.transform = "translateX(10px)";
+		document.getElementById("themescroller").style.background = "#ffcc80";
+	}
+	else{
+		document.getElementById("themescroller").style.transform = "translateX(-10px)";
+		document.getElementById("themescroller").style.background = "#636262";
+	}
+   
+}
