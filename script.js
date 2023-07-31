@@ -84,12 +84,6 @@ checkbox.addEventListener("change", function() {
 
 document.getElementById("theme").addEventListener("click", change); 
 function change(){
-	if(window.getComputedStyle(container).backgroundImage.slice(34,40) == "01.png"){
-		document.getElementById("container").style.backgroundImage = "url(images/04.png)";
-	}
-	else{
-		document.getElementById("container").style.backgroundImage = "url(images/01.png)";
-	}
 
 	if(window.getComputedStyle(themescroller).background == "rgb(99, 98, 98)"){
 		document.getElementById("themescroller").style.transform = "translateX(10px)";
@@ -99,5 +93,14 @@ function change(){
 		document.getElementById("themescroller").style.transform = "translateX(-10px)";
 		document.getElementById("themescroller").style.background = "#636262";
 	}
+	if(window.getComputedStyle(themescroller).transform.slice(19,22) == "-10"){
+		document.getElementById("container").style.backgroundImage = "url(images/04.png)";
+	}
+	else{
+		document.getElementById("container").style.backgroundImage = "url(images/01.png)";
+	}
+
+	
    
 }
+
