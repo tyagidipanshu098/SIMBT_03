@@ -85,7 +85,7 @@ checkbox.addEventListener("change", function() {
 document.getElementById("theme").addEventListener("click", change); 
 function change(){
 
-	if(window.getComputedStyle(themescroller).background == "rgb(99, 98, 98)"){
+	if(window.getComputedStyle(themescroller).background.slice(0, 15) == "rgb(99, 98, 98)"){
 		document.getElementById("themescroller").style.transform = "translateX(10px)";
 		document.getElementById("themescroller").style.background = "#ffcc80";
 	}
